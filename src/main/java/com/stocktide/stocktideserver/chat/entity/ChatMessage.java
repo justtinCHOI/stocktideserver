@@ -1,4 +1,4 @@
-package com.stocktide.stocktideserver.entity;
+package com.stocktide.stocktideserver.chat.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

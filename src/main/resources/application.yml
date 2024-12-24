@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: stocktideserver
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/stocktidedb
+    username: stocktideuser
+    password: stocktide123!
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+  servlet:
+    multipart:
+      max-request-size: 30MB
+      max-file-size: 10MB
+  devtools:
+    restart:
+      enabled: false
+logging:
+  level:
+    com:
+      zaxxer: info
+com:
+  stocktide:
+    upload:
+      path: upload
+token:
+  app-key: "PS2Gi44Ef8ltOl0rmxdJIcMwD4XDOOgBPVmS"
+  app-secret: "hPzjcvoiVp/FpiSoVJ3U/sopgsnZuVrCHJC2/okbMdOjjeTQP/umP1iABPKoDHaod2aLh9devhz8hA+7K7xCyqlHrPjHBRauO5jFc7mSbMvGy1nVPI5swH8zEocHyxulWByDzLIdDVMB4t7arxACIiwQ07zOBpktCWemOMQRSkaQqdyK3d8="
+
+stock-url:
+  token: "https://openapivts.koreainvestment.com:29443/oauth2/tokenP"
+  stockasbi: "https://openapivts.koreainvestment.com:29443/uapi/domestic-stock/v1/quotations/inquire-asking-price-exp-ccn"
+  stockhour: "https://openapivts.koreainvestment.com:29443/uapi/domestic-stock/v1/quotations/inquire-time-itemchartprice"
+  kospi: "https://openapivts.koreainvestment.com:29443/uapi/domestic-stock/v1/quotations/inquire-daily-indexchartprice"
+server:
+  port: 8080
