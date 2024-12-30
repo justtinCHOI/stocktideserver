@@ -30,7 +30,7 @@ public class StockOrderController {
 
     // 보유 주식 정보들 반환하는 api
     @GetMapping("/stockholds/{memberId}")
-    public ResponseEntity<Object> getStockHolds(@PathVariable("memberId") Long memberId, @RequestParam Long companyId) {
+    public ResponseEntity<List<StockHoldResponseDto>> getStockHolds(@PathVariable("memberId") Long memberId, @RequestParam Long companyId) {
 
         List<StockHoldResponseDto> stockHoldResponseDtos = stockHoldService.findStockHolds(memberId, companyId);
 

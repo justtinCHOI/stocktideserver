@@ -36,7 +36,6 @@ public class SocialController {
         claims.put("accessToken", jwtAccessToken);
         claims.put("refreshToken", jwtRefreshToken);
 
-
         return claims;
     }
 

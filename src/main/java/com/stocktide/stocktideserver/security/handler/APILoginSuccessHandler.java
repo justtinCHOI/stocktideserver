@@ -30,11 +30,8 @@ public class APILoginSuccessHandler implements AuthenticationSuccessHandler {
 
         try {
 
-            log.info("Login success....." + claims);
             String accessToken = JWTUtil.generateToken(claims, 10);
-            log.info("accessToken : " + accessToken);
             String refreshToken = JWTUtil.generateToken(claims, 60 * 24);
-            log.info("refreshToken : " + refreshToken);
 
             claims.put("accessToken", accessToken);
             claims.put("refreshToken", refreshToken);
