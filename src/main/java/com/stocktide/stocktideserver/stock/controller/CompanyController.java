@@ -39,6 +39,7 @@ public class CompanyController {
         return new ResponseEntity<>(companyResponseDtoList, HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{companyId}")
     public ResponseEntity<CompanyResponseDto> getCompany(@PathVariable("companyId") Long companyId) {
 
